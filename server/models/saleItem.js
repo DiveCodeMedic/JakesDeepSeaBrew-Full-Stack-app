@@ -3,12 +3,12 @@ module.exports = function (sequelize, DataTypes) {
 
     var SaleItem = sequelize.define('SaleItem', {
       saleId:  {
-          type: Datatypes.INTEGER,
+          type: DataTypes.INTEGER,
           model: 'Sale',
           key: 'id'
       }, 
       productId:  {
-          type: Datatypes.INTEGER,
+          type: DataTypes.INTEGER,
           model: 'Product',
           key: 'id'
       },

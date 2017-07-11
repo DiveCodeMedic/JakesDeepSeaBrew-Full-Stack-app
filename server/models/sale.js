@@ -2,10 +2,10 @@
 module.exports = function (sequelize, DataTypes) {
 
     var Sale = sequelize.define('Sale', {
-      date: DataTypes.Date, 
-      totalPrice: DataTypes.Date,
+      date: DataTypes.DATE, 
+      totalPrice: DataTypes.DATE,
       customerId: {
-          type: Datatypes.INTEGER,
+          type: DataTypes.INTEGER,
           model: 'Customer',
           key: 'id'
       }
