@@ -37,16 +37,18 @@ router.post('/', (req, res) => {
     res.status(201).json(customer);
   });
 });
-
+ 
 router.put('/:id', (req, res) => {
   db
     .Customer
     .findById(req.params.id)
     .then(customer => {
-      return customer.update(req.body);
+     return customer.update(req.body);
     })
-    .then(() => res.sendStatus(204));
-});
+     .then(() => res.sendStatus(204));
+     });
+    
+    
 
 router.delete('/id', (req, res) => {
       db
