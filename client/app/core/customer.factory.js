@@ -10,7 +10,7 @@
     function customerFactory($http) {
         var service = {
             getAll: getAll,
-            // getById: getById,
+            getById: getById,
             create: create,
             update: update,
             remove: remove
@@ -22,7 +22,6 @@
             return $http
                 .get('/api/customers')
                 .then(function (response) {
-                    // console.log(response)
                     return response.data;
                 });
         };
@@ -50,8 +49,6 @@
                     return response.data;
                 });
         };
-
-
         function remove(customer) {
             return $http
                 .delete('/api/customers/' + customer.id)

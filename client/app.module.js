@@ -16,9 +16,9 @@
 
     ]).config(appConfig);
 
-appConfig.$inject = ['$urlRouterProvider', '$stateProvider'];
+    appConfig.$inject = ['$urlRouterProvider', '$stateProvider'];
 
-    function  appConfig($urlRouterProvider, $stateProvider) {
+    function appConfig($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/dashboard');
 
         $stateProvider.state('dashboard', {
@@ -26,20 +26,30 @@ appConfig.$inject = ['$urlRouterProvider', '$stateProvider'];
             controller: 'DashboardController as dashboardCtrl',
             templateUrl: 'app/dashboard/dashboard.template.html'
         });
+
         $stateProvider.state('customer-grid', {
             url: '/customer-grid',
             controller: 'CustomerGridController as customerGridCtrl',
             templateUrl: 'app/customer/customer.grid.template.html'
         });
+
+        $stateProvider.state('customer-detail', {
+            url: '/customer-detail?id',
+            controller: 'CustomerDetailController as customerDetailCtrl',
+            templateUrl: 'app/customer/customer.detail.template.html'
+        });
+
         $stateProvider.state('product-detail', {
-            url: '/product-detail',
+            url: '/product-detail?id',
             controller: 'ProductDetailController as productDetailCtrl',
             templateUrl: 'app/product/product.grid.template.html'
         });
+
         $stateProvider.state('sales-detail', {
             url: '/sales-detail',
             controller: 'SalesDetailController as salesDetailCtrl',
             templateUrl: 'app/sales/sales.grid.template.html'
         });
+
     }
 })();

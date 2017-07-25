@@ -17,7 +17,6 @@
             customerFactory
                 .getAll()
                 .then(function(customers){
-                    console.log(customers);
                     vm.customers = customers;
                 });
         }

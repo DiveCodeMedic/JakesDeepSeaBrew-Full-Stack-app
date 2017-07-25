@@ -13,13 +13,14 @@
             <td>{{customer.telephone || "N/A"}}</td>
             <td>{{customer.email || "N/A"}}</td>
             <td>
-
-                <bt class="btn btn-success">
+                <div class="btn-group">
+                <bt class="btn btn-success" ui-sref="customer-detail({ id: customer.id})">
                     <i class="fa fa-edit"></i>
                 </bt>
                 <bt class="btn btn-danger">
                     <i class="fa fa-trash"></i>
                 </bt>
+                </div>
             </td>
         </tr>
     </tbody>

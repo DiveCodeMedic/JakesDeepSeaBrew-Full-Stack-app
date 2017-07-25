@@ -10,7 +10,7 @@
     function salesFactory($http) {
         var service = {
             getAll: getAll,
-            //getById: getById,
+            getById: getById,
             create: create,
             update: update,
             remove: remove
